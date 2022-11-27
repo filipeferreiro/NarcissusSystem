@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "Produtos";
+}
+
+<section class="produtos">
+    <h2>Veja os produtos da Narcissus</h2>
+    <div class="container">
+        <div class="produto-single">
+            <img src="~/img/oleo.jpg" alt="imagem do produto" />
+            <h3>Óleo para cabelo</h3>
+            <div class="estrelas">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div><!--estrelas-->
+            <p class="preco-antes">R$200,00</p>
+            <p>R$120,00</p>
+            <a href="@Url.Action("ProdutoSingle", "Home")">Comprar</a>
+        </div><!--produto-single-->
+        <div class="produto-single">
+            <img src="~/img/hidra.png" alt="imagem do produto" />
+            <h3>Hidratante</h3>
+            <div class="estrelas">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div><!--estrelas-->
+            <p class="preco-antes">R$80,00</p>
+            <p>R$60,00</p>
+            <a href="@Url.Action("ProdutoSingle", "Home")">Comprar</a>
+        </div><!--produto-single-->
+        <div class="produto-single">
+            <img src="~/img/mascara.jpg" alt="imagem do produto" />
+            <h3>Máscara capilar</h3>
+            <div class="estrelas">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div><!--estrelas-->
+            <p class="preco-antes">R$330,00</p>
+            <p>R$270,00</p>
+            <a href="@Url.Action("ProdutoSingle", "Home")">Comprar</a>
+        </div><!--produto-single-->
+        <div class="produto-single">
+            <img src="~/img/gel.jpg" alt="imagem do produto" />
+            <h3>Gel esfoliante</h3>
+            <div class="estrelas">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div><!--estrelas-->
+            <p class="preco-antes">R$200,00</p>
+            <p>R$140,00</p>
+            <a href="@Url.Action("ProdutoSingle", "Home")">Comprar</a>
+        </div><!--produto-single-->
+    </div><!--container-->
+</section>

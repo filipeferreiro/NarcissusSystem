@@ -1,0 +1,78 @@
+﻿@model  NarcissusSystem.ViewModel.AlterarSenhaViewModel
+
+@{
+    ViewBag.Title = "Alterar Senha";
+}
+
+<session class="perfil">
+    <div class="container">
+        <h2>Perfil do usuário</h2>
+        <p class="intro-perfil">Altere sua senha, veja produtos favoritos...</p>
+        <div class="perfil-wraper">
+            <div class="form-wraper">
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-single">
+                        @Html.LabelFor(model => model.SenhaAtual)
+                        @Html.EditorFor(model => model.SenhaAtual, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.SenhaAtual, "", new { @class = "text-danger" })
+                    </div><!--form-single-->
+
+                    <div class="form-single">
+                        @Html.LabelFor(model => model.NovaSenha)
+                        @Html.EditorFor(model => model.NovaSenha, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.NovaSenha, "", new { @class = "text-danger" })
+                    </div><!--form-single-->
+
+                    <div class="form-single">
+                        @Html.LabelFor(model => model.ConfirmarSenha)
+                        @Html.EditorFor(model => model.ConfirmarSenha, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.ConfirmarSenha, "", new { @class = "text-danger" })
+                    </div><!--form-single-->
+
+
+                    <div class="form-single">
+                        <input type="submit" value="Alterar" class="btn btn-default" />
+                    </div><!--form-single-->
+
+
+                }
+            </div><!--form-wraper-->
+            <div class="favoritos">
+                <h3 class="titulo-favorito"><i class="fa-solid fa-heart"></i> Seus favoritos</h3>
+                <hr />
+                <div class="favorito-single">
+                    <img src="~/img/creme.png" alt="imagem dos favoritos" />
+                    <div class="favorito-info">
+                        <h3>Título do meu favorito</h3>
+                        <p>R$ 120,00</p>
+                        <a href="">excluir</a>
+                    </div><!--favorito-info-->
+                </div><!--favorito-single-->
+                <hr />
+                <div class="favorito-single">
+                    <img src="~/img/creme.png" alt="imagem dos favoritos" />
+                    <div class="favorito-info">
+                        <h3>Título do meu favorito</h3>
+                        <p>R$ 120,00</p>
+                        <a href="">excluir</a>
+                    </div><!--favorito-info-->
+                </div><!--favorito-single-->
+                <hr />
+                <div class="favorito-single">
+                    <img src="~/img/creme.png" alt="imagem dos favoritos" />
+                    <div class="favorito-info">
+                        <h3>Título do meu favorito</h3>
+                        <p>R$ 120,00</p>
+                        <a href="">excluir</a>
+                    </div><!--favorito-info-->
+                </div><!--favorito-single-->
+                <hr />
+                <a href="#" class="encerra-compra">Ver todos <i class="fa-solid fa-box"></i></a>
+            </div><!--favoritos-->
+        </div><!--perfil-wraper-->
+    </div><!--container-->
+</session><!--perfil-->

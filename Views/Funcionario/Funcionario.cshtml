@@ -1,0 +1,143 @@
+﻿@model NarcissusSystem.Models.Funcionario
+
+@{
+    ViewBag.Title = "Funcionario";
+}
+<style>
+    /* estilo dos formularios */
+    .titulo-autenticacao {
+        text-align: center;
+        color: #e5243e;
+        padding: 15px 2%;
+    }
+
+    .formulario .container-site {
+        border-radius: 20px;
+        max-width: 80%;
+        margin-left:10%;
+        padding: 55px 40px 40px 40px;
+        background-color: #e5e5e5;
+    }
+
+    .formulario form {
+        margin: 0 auto;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 20px 10px;
+    }
+
+    .form-single {
+        margin: 0 auto;
+    }
+
+    .formulario .form-single label {
+        display: block;
+        font-size: 17px;
+    }
+
+    .formulario .form-single input[type=submit] {
+        padding: 4px 8px;
+        background-color: #fff;
+        font-size: 16px;
+        border: 1px solid #e5243e;
+        border-radius: 4px;
+        color: #e5243e;
+        transition: 0.4s;
+    }
+
+        .formulario .form-single input[type=submit]:hover {
+            background-color: #e5243e;
+            color: #fff;
+        }
+
+    .formulario .formulario-link {
+        width: 100%;
+        text-align: right;
+        margin-top: 6px;
+    }
+</style>
+<section class="formulario">
+    <h2 class="titulo-autenticacao">Cadastro do funcionário</h2>
+    <div class="container-site">
+        @using (Html.BeginForm("CadFuncionario", "Funcionario", FormMethod.Post))
+        {
+            @Html.ValidationSummary(true)
+
+            <div class="form-single">
+                @Html.LabelFor(m => m.FuncCod, "Código")
+
+                @Html.EditorFor(m => m.FuncCod)
+                @Html.ValidationMessageFor(m => m.FuncCod)
+            </div><!--form-single-->
+
+            <div class="form-single">
+                @Html.LabelFor(m => m.FuncCod, "Nome")
+
+                @Html.EditorFor(m => m.FuncNome)
+                @Html.ValidationMessageFor(m => m.FuncNome)
+            </div><!--form-single-->
+
+            <div class="form-single">
+                @Html.LabelFor(m => m.FuncCod, "CPF")
+
+                @Html.EditorFor(m => m.FuncCPF)
+                @Html.ValidationMessageFor(m => m.FuncCPF)
+            </div><!--form-single-->
+
+            <div class="form-single">
+                @Html.LabelFor(m => m.FuncCod, "RG")
+
+                @Html.EditorFor(m => m.FuncRg)
+                @Html.ValidationMessageFor(m => m.FuncRg)
+            </div><!--form-single-->
+
+            <div class="form-single">
+                @Html.LabelFor(m => m.FuncCod, "Nascimento")
+
+                @Html.EditorFor(m => m.FuncDtNasc)
+                @Html.ValidationMessageFor(m => m.FuncDtNasc)
+            </div><!--form-single-->
+
+            <div class="form-single">
+                @Html.LabelFor(m => m.FuncCod, "Endereço")
+
+                @Html.EditorFor(m => m.FuncEnd)
+                @Html.ValidationMessageFor(m => m.FuncEnd)
+            </div><!--form-single-->
+
+            <div class="form-single">
+                @Html.LabelFor(m => m.FuncCod, "Celular")
+
+                @Html.EditorFor(m => m.FuncCel)
+                @Html.ValidationMessageFor(m => m.FuncCel)
+            </div><!--form-single-->
+
+            <div class="form-single">
+                @Html.LabelFor(m => m.FuncCod, "Email")
+
+                @Html.EditorFor(m => m.FuncEmail)
+                @Html.ValidationMessageFor(m => m.FuncEmail)
+            </div><!--form-single-->
+
+            <div class="form-single">
+                @Html.LabelFor(m => m.FuncCod, "Cargo")
+
+                @Html.EditorFor(m => m.FuncCargo)
+                @Html.ValidationMessageFor(m => m.FuncCargo)
+            </div><!--form-single-->
+
+            <div class="form-single">
+                <!--DIV PARA CENTRALIZAR SUBMIT-->
+            </div><!--form-single-->
+
+            <div class="form-single">
+                <input type="submit" id="buttonCadFunc" value="Cadastrar" />
+            </div><!--form-single-->
+        }
+
+    <div class="formulario-link">
+        @Html.ActionLink("Voltar para o Início", "pagAdm", "Administrativo")
+    </div>
+    </div><!--container-->
+</section><!--formulario-->

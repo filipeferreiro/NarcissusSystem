@@ -1,0 +1,124 @@
+﻿@model  NarcissusSystem.Models.Cliente
+
+
+@{
+    ViewBag.Title = "Cliente";
+}
+
+<style>
+    /* estilo dos formularios */
+    .titulo-autenticacao {
+        text-align: center;
+        color: #e5243e;
+        padding: 15px 2%;
+    }
+
+    .formulario .container-site {
+        border-radius: 20px;
+        max-width: 80%;
+        margin-left: 10%;
+        padding: 55px 40px 40px 40px;
+        background-color: #e5e5e5;
+    }
+
+    .formulario form {
+        margin: 0 auto;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 20px 10px;
+    }
+
+    .form-single {
+        margin: 0 auto;
+    }
+
+    .formulario .form-single label {
+        display: block;
+        font-size: 17px;
+    }
+
+    .formulario .form-single input[type=submit] {
+        padding: 4px 8px;
+        background-color: #fff;
+        font-size: 16px;
+        border: 1px solid #e5243e;
+        border-radius: 4px;
+        color: #e5243e;
+        transition: 0.4s;
+    }
+
+        .formulario .form-single input[type=submit]:hover {
+            background-color: #e5243e;
+            color: #fff;
+        }
+
+    .formulario .formulario-link {
+        width: 100%;
+        text-align: right;
+        margin-top: 6px;
+    }
+</style>
+<section class="formulario">
+    <h2 class="titulo-autenticacao">Cadastro do Cliente</h2>
+    <div class="container-site">
+        @using (Html.BeginForm("CadCliente", "Cliente", FormMethod.Post))
+        {
+            @Html.ValidationSummary(true)
+
+            <div class="form-single">
+                @Html.LabelFor(m => m.ClienteNome, "Nome")
+
+                @Html.EditorFor(model => model.ClienteNome)
+                @Html.ValidationMessageFor(model => model.ClienteNome)
+            </div><!--form-single-->
+
+            <div class="form-single">
+                @Html.LabelFor(m => m.ClienteCPF, "CPF")
+
+                @Html.EditorFor(model => model.ClienteCPF)
+                @Html.ValidationMessageFor(model => model.ClienteCPF)
+            </div><!--form-single-->
+
+            <div class="form-single">
+                @Html.LabelFor(m => m.ClieDtNasc, "Nascimento")
+
+                @Html.EditorFor(model => model.ClieDtNasc)
+                @Html.ValidationMessageFor(model => model.ClieDtNasc)
+            </div><!--form-single-->
+
+            <div class="form-single">
+                @Html.LabelFor(m => m.ClienteEmail, "Email")
+
+                @Html.EditorFor(model => model.ClienteEmail)
+                @Html.ValidationMessageFor(model => model.ClienteEmail)
+            </div><!--form-single-->
+
+            <div class="form-single">
+                @Html.LabelFor(m => m.ClienteCel, "Celular")
+
+                @Html.EditorFor(model => model.ClienteCel)
+                @Html.ValidationMessageFor(model => model.ClienteCel)
+            </div><!--form-single-->
+
+            <div class="form-single">
+                @Html.LabelFor(m => m.ClienteEnd, "Endereço")
+
+                @Html.EditorFor(model => model.ClienteEnd)
+                @Html.ValidationMessageFor(model => model.ClienteEnd)
+            </div><!--form-single-->
+
+            <div class="form-single">
+                <!--DIV PARA CENTRALIZAR SUBMIT-->
+            </div><!--form-single-->
+
+            <div class="form-single">
+                <input type="submit" id="buttonCadClie" value="Cadastrar" />
+            </div><!--form-single-->
+        }
+
+        <div class="formulario-link">
+            @Html.ActionLink("Voltar para o Início", "pagAdm", "Administrativo")
+        </div>
+    </div><!--container-->
+</section><!--formulario-->

@@ -1,0 +1,51 @@
+﻿@model NarcissusSystem.ViewModel.CadastroUsuarioViewModel
+
+@{
+    ViewBag.Title = "Cadastrar";
+}
+
+<section class="formulario">
+    <h2 class="titulo-autenticacao">Cadastre-se</h2>
+    <div class="container">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-single">
+                @Html.LabelFor(model => model.UsuarioNome)
+                @Html.EditorFor(model => model.UsuarioNome, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.UsuarioNome, "", new { @class = "text-danger" })
+            </div><!--form-single-->
+
+            <div class="form-single">
+                @Html.LabelFor(model => model.Login)
+                @Html.EditorFor(model => model.Login, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Login, "", new { @class = "text-danger" })
+            </div><!--form-single-->
+
+            <div class="form-single">
+                @Html.LabelFor(model => model.Senha)
+                @Html.EditorFor(model => model.Senha, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Senha, "", new { @class = "text-danger" })
+            </div><!--form-single-->
+
+            <div class="form-single">
+                @Html.LabelFor(model => model.ConfirmaSenha)
+                @Html.EditorFor(model => model.ConfirmaSenha, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ConfirmaSenha, "", new { @class = "text-danger" })
+            </div><!--form-single-->
+
+            <div class="form-single">
+                <input type="submit" value="Cadastrar" class="btn btn-default" />
+            </div><!--form-single-->
+        }
+
+        <div class="formulario-link">
+            @Html.ActionLink("Voltar para o Início", "Index", "Home")
+        </div><!--formulario-link-->
+    </div><!--container-->
+</section><!--formulario-->
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

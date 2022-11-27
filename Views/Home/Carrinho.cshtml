@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Carrinho";
+}
+
+<section class="carrinho">
+    <div class="container">
+        <h2>Carrinho</h2>
+
+        <div class="box-content">
+            <div class="boxes">
+                <div class="box-single-wraper">
+                    <div class="box-single">
+                        <div class="topo-box">
+                            <img style="max-width: 350px;width:100%;max-height:250px" src="~/img/gel.jpg">
+                        </div><!--topo-box-->
+                        <div class="body-box">
+                            <p><b><i class="fa fa-info-circle"></i> Nome do produto:</b> Gel Hidrabene</p>
+                            <p><b><i class="fa fa-info-circle"></i> Descrição:</b> Máscara de argila revitalizante</p>
+                            <div class="group-btn" style="border-bottom: 1px solid #ccc;">
+                                <form method="post" style="margin:10px 0;">
+                                    <label>Quantidade:</label>
+                                    <input formato="data" type="number" min="0" max="900" step="1" value="" name="quantidade">
+                                    <input type="hidden" name="produto_id" value="">
+                                    <input type="submit" name="atualizar" value="Atualizar!">
+                                </form>
+                            </div><!--group-bnt-->
+                            <div class="group-btn">
+                                <a class="btn delete" href=""><i class="fa fa-times"></i> Excluir</a>
+                            </div><!--group-bnt-->
+                        </div><!--body-box-->
+                    </div><!--box-single-->
+                    <div class="clear"></div>
+                </div><!--box-single-wraper-->
+                <div class="box-single-wraper">
+                    <div class="box-single">
+                        <div class="topo-box">
+                            <img style="max-width: 350px;width:100%;max-height:250px" src="~/img/hidra.png">
+                        </div><!--topo-box-->
+                        <div class="body-box">
+                            <p><b><i class="fa fa-info-circle"></i> Nome do produto:</b> Hidratante nativaSPA - ameixa</p>
+                            <p><b><i class="fa fa-info-circle"></i> Descrição:</b> Descricao do produto</p>
+                            <div class="group-btn" style="border-bottom: 1px solid #ccc;">
+                                <form method="post" style="margin:10px 0;">
+                                    <label>Quantidade:</label>
+                                    <input formato="data" type="number" min="0" max="900" step="1" value="" name="quantidade">
+                                    <input type="hidden" name="produto_id" value="">
+                                    <input type="submit" name="atualizar" value="Atualizar!">
+                                </form>
+                            </div><!--group-bnt-->
+                            <div class="group-btn">
+                                <a class="btn delete" href=""><i class="fa fa-times"></i> Excluir</a>
+                            </div><!--group-bnt-->
+                        </div><!--body-box-->
+                    </div><!--box-single-->
+                    <div class="clear"></div>
+                </div><!--box-single-wraper-->
+            </div><!--boxes-->
+        </div><!--box-content-->
+    </div><!--container-->
+</section><!--carrinho-->

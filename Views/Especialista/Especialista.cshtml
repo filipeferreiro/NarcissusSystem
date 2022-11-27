@@ -1,0 +1,124 @@
+﻿@model NarcissusSystem.Models.Especialista
+
+@{
+    ViewBag.Title = "Especialista";
+}
+
+<style>
+    /* estilo dos formularios */
+    .titulo-autenticacao {
+        text-align: center;
+        color: #e5243e;
+        padding: 15px 2%;
+    }
+
+    .formulario .container-site {
+        border-radius: 20px;
+        max-width: 80%;
+        margin-left: 10%;
+        padding: 55px 40px 40px 40px;
+        background-color: #e5e5e5;
+    }
+
+    .formulario form {
+        margin: 0 auto;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 20px 10px;
+    }
+
+    .form-single {
+        margin: 0 auto;
+    }
+
+    .formulario .form-single label {
+        display: block;
+        font-size: 17px;
+    }
+
+    .formulario .form-single input[type=submit] {
+        padding: 4px 8px;
+        background-color: #fff;
+        font-size: 16px;
+        border: 1px solid #e5243e;
+        border-radius: 4px;
+        color: #e5243e;
+        transition: 0.4s;
+    }
+
+        .formulario .form-single input[type=submit]:hover {
+            background-color: #e5243e;
+            color: #fff;
+        }
+
+    .formulario .formulario-link {
+        width: 100%;
+        text-align: right;
+        margin-top: 6px;
+    }
+</style>
+
+<section class="formulario">
+    <h2 class="titulo-autenticacao">Cadastro de Especialista</h2>
+    <div class="container-site">
+        @using (Html.BeginForm("CadEspecialista", "Especialista", FormMethod.Post))
+        {
+            @Html.ValidationSummary(true)
+
+            <div class="form-single">
+                @Html.LabelFor(m => m.EspecialistaID, "ID")
+
+                @Html.EditorFor(m => m.EspecialistaID)
+                @Html.ValidationMessageFor(m => m.EspecialistaID)
+            </div><!--form-single-->
+
+            <div class="form-single">
+                @Html.LabelFor(m => m.EspecialistaNome, "Nome")
+
+                @Html.EditorFor(m => m.EspecialistaNome)
+                @Html.ValidationMessageFor(m => m.EspecialistaNome)
+            </div><!--form-single-->
+
+            <div class="form-single">
+                @Html.LabelFor(m => m.EspecDtNasc, "Nascimento")
+
+                @Html.EditorFor(m => m.EspecDtNasc)
+                @Html.ValidationMessageFor(m => m.EspecDtNasc)
+            </div><!--form-single-->
+
+            <div class="form-single">
+                @Html.LabelFor(m => m.EspecCPF, "CPF")
+
+                @Html.EditorFor(m => m.EspecCPF)
+                @Html.ValidationMessageFor(m => m.EspecCPF)
+            </div><!--form-single-->
+
+            <div class="form-single">
+                @Html.LabelFor(m => m.EspecEmail, "Email")
+
+                @Html.EditorFor(m => m.EspecEmail)
+                @Html.ValidationMessageFor(m => m.EspecEmail)
+            </div><!--form-single-->
+
+            <div class="form-single">
+                @Html.LabelFor(m => m.EspecCel, "Celular")
+
+                @Html.EditorFor(m => m.EspecCel)
+                @Html.ValidationMessageFor(m => m.EspecCel)
+            </div><!--form-single-->
+
+            <div class="form-single">
+                <!--DIV PARA CENTRALIZAR SUBMIT-->
+            </div><!--form-single-->
+
+            <div class="form-single">
+                <input type="submit" id="buttonCadEspec" value="Cadastrar" />
+            </div><!--form-single-->
+        }
+
+    <div class="formulario-link">
+        @Html.ActionLink("Voltar para o Início", "pagAdm", "Administrativo")
+    </div>
+    </div><!--container-->
+</section><!--formulario-->

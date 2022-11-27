@@ -1,0 +1,122 @@
+﻿@model NarcissusSystem.Models.Procedimento
+
+@{
+    ViewBag.Title = "Procedimento";
+}
+<style>
+    /* estilo dos formularios */
+    .titulo-autenticacao {
+        text-align: center;
+        color: #e5243e;
+        padding: 15px 2%;
+    }
+
+    .formulario .container-site {
+        border-radius: 20px;
+        max-width: 80%;
+        margin-left: 10%;
+        padding: 55px 40px 40px 40px;
+        background-color: #e5e5e5;
+    }
+
+    .formulario form {
+        margin: 0 auto;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 20px 10px;
+    }
+
+    .form-single {
+        margin: 0 auto;
+    }
+
+    .formulario .form-single label {
+        display: block;
+        font-size: 17px;
+    }
+
+    .formulario .form-single input[type=submit] {
+        padding: 4px 8px;
+        background-color: #fff;
+        font-size: 16px;
+        border: 1px solid #e5243e;
+        border-radius: 4px;
+        color: #e5243e;
+        transition: 0.4s;
+    }
+
+        .formulario .form-single input[type=submit]:hover {
+            background-color: #e5243e;
+            color: #fff;
+        }
+
+    .formulario .formulario-link {
+        width: 100%;
+        text-align: right;
+        margin-top: 6px;
+    }
+</style>
+<section class="formulario">
+    <h2 class="titulo-autenticacao">Cadastro do Procedimento</h2>
+    <div class="container-site">
+        @using (Html.BeginForm("CadProcedimento", "Procedimento", FormMethod.Post))
+        {
+            @Html.ValidationSummary(true)
+
+            <div class="form-single">
+                @Html.LabelFor(m => m.ProcedimentoID, "ID")
+
+                @Html.EditorFor(m => m.ProcedimentoID)
+                @Html.ValidationMessageFor(m => m.ProcedimentoID)
+            </div><!--form-single-->
+
+            <div class="form-single">
+                @Html.LabelFor(m => m.ProcedimentoNome, "Nome")
+
+                @Html.EditorFor(m => m.ProcedimentoNome)
+                @Html.ValidationMessageFor(m => m.ProcedimentoNome)
+            </div><!--form-single-->
+
+            <div class="form-single">
+                @Html.LabelFor(m => m.ProceDtNasc, "Data do procedimento")
+
+                @Html.EditorFor(m => m.ProceDtNasc)
+                @Html.ValidationMessageFor(m => m.ProceDtNasc)
+            </div><!--form-single-->
+
+            <div class="form-single">
+                @Html.LabelFor(m => m.ProcedimentoDesc, "Descrição")
+
+                @Html.EditorFor(m => m.ProcedimentoDesc)
+                @Html.ValidationMessageFor(m => m.ProcedimentoDesc)
+            </div><!--form-single-->
+
+            <div class="form-single">
+                @Html.LabelFor(m => m.ProcedimentoMtd, "Método de pagamento")
+
+                @Html.EditorFor(m => m.ProcedimentoMtd)
+                @Html.ValidationMessageFor(m => m.ProcedimentoMtd)
+            </div><!--form-single-->
+
+            <div class="form-single">
+                @Html.LabelFor(m => m.ProcedimentoValor, "Valor total")
+
+                @Html.EditorFor(m => m.ProcedimentoValor)
+                @Html.ValidationMessageFor(m => m.ProcedimentoValor)
+            </div><!--form-single-->
+
+            <div class="form-single">
+                <!--DIV PARA CENTRALIZAR SUBMIT-->
+            </div><!--form-single-->
+
+            <div class="form-single">
+                <input type="submit" id="buttonCadProce" value="Cadastrar" />
+            </div><!--form-single-->
+        }
+
+    <div class="formulario-link">
+        @Html.ActionLink("Voltar para o Início", "pagAdm", "Administrativo")
+    </div>
+    </div><!--container-->
+</section><!--formulario-->

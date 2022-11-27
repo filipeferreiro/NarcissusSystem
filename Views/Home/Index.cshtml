@@ -1,0 +1,185 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<section class="slider-banner">
+    <div class="container-banner">
+        <img src="~/img/banner1.jpg" alt="banner da página inicial">
+        <img src="~/img/banner2.jpg" alt="banner da página inicial">
+        <img src="~/img/banner3.jpg" alt="banner da página inicial">
+    </div><!--container-bannner-->
+</section><!--slider-banner-->
+
+<section class="apresentacao">
+    <div class="container">
+        <h2>Bem-vindo a Narcissus</h2>
+        <hr />
+        <p>
+            Clínica estética localizada em São Paulo, a Narcissus busca ajudar os nossos clientes a alcançar a 
+            satisfação com o seu corpo. Usando diversos procedimentos, produtos e o apoio dos melhores 
+            profissionais, você não irá se arrepender com o resultado final.
+        </p>
+        <h2 class="conheca_tratamentos">Conheça nossos tratamentos <br /> <i class="fa-solid fa-chevron-down"></i></h2>
+    </div>
+</section><!--apresentacao-->
+
+<section class="tratamentos">
+    <div class="container">
+        <div class="tratamento-single">
+            <img src="~/img/drenagem.jpg" alt="tratamento feito pela Narcissus" />
+            <h2>Drenagem linfática</h2>
+            <p>
+                Esse tratamento tem como objetivo aumentar o volume e a velocidade da linfa que vai ser 
+                transportada pelos vasos linfáticos, auxiliando na eliminação de toxinas e excessos de líquidos 
+                do organismo.
+            </p>
+        </div><!--tratamento-single-->
+        <div class="tratamento-single">
+            <img src="~/img/limpeza.jpg" alt="tratamento feito pela Narcissus" />
+            <h2>Limpeza de pele</h2>
+            <p>
+                A limpeza começa com a higienização para remover substâncias como a maquiagem, as impurezas e a 
+                gordura da pele. Em seguida, é realizada uma esfoliação para remover as células mortas e facilitar 
+                a eliminação dos cravos.
+            </p>
+        </div><!--tratamento-single-->
+        <div class="tratamento-single">
+            <img src="~/img/agulha.jpg" alt="tratamento feito pela Narcissus" />
+            <h2>Microagulhamento</h2>
+            <p>
+                O microagulhamento é um procedimento estético que por meio de várias agulhas aumenta a 
+                vasodilatação e estimula a produção de colágeno. Indicado para diminuir manchas, rugas, das 
+                linhas de expressão, promovendo o rejuvenescimento facial e clareamento da pele.
+            </p>
+        </div><!--tratamento-single-->
+    </div><!--container-->
+    <a href="@Url.Action("Tratamentos", "Home")">Saiba mais <i class="fa-solid fa-hand-sparkles"></i></a>
+</section><!--tratamentos-->
+
+<section class="produtos">
+    <h2>Nossos produtos mais procurados</h2>
+    <div class="container">
+        <div class="produto-single">
+            <img src="~/img/oleo.jpg" alt="imagem do produto" />
+            <h3>Óleo para cabelo</h3>
+            <div class="estrelas">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div><!--estrelas-->
+            <p class="preco-antes">R$200,00</p>
+            <p>R$120,00</p>
+            <a href="@Url.Action("ProdutoSingle", "Home")">Comprar</a>
+        </div><!--produto-single-->
+        <div class="produto-single">
+            <img src="~/img/hidra.png" alt="imagem do produto" />
+            <h3>Hidratante</h3>
+            <div class="estrelas">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div><!--estrelas-->
+            <p class="preco-antes">R$80,00</p>
+            <p>R$60,00</p>
+            <a href="@Url.Action("ProdutoSingle", "Home")">Comprar</a>
+        </div><!--produto-single-->
+        <div class="produto-single">
+            <img src="~/img/mascara.jpg" alt="imagem do produto" />
+            <h3>Máscara capilar</h3>
+            <div class="estrelas">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div><!--estrelas-->
+            <p class="preco-antes">R$330,00</p>
+            <p>R$270,00</p>
+            <a href="@Url.Action("ProdutoSingle", "Home")">Comprar</a>
+        </div><!--produto-single-->
+        <div class="produto-single">
+            <img src="~/img/gel.jpg" alt="imagem do produto" />
+            <h3>Gel esfoliante</h3>
+            <div class="estrelas">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div><!--estrelas-->
+            <p class="preco-antes">R$200,00</p>
+            <p>R$140,00</p>
+            <a href="@Url.Action("ProdutoSingle", "Home")">Comprar</a>
+        </div><!--produto-single-->
+    </div><!--container-->
+</section><!--produtos-->
+<section class="convence">
+    <h2>Porque escolher a Narcissus?</h2>
+    <div class="container">
+        <p>
+            Contando com equipamentos de alta tecnologia, profissionais qualificados e tratamentos com protocolos 
+            testados e aprovados que utilizam os melhores princípios ativos do mercado, oferecemos qualidade e 
+            eficiência para homens e mulheres que desejam cuidar da beleza e da saúde.
+            Aqui nós cuidamos de você, pois acreditamos que beleza é sentir-se bem e feliz com sua saúde e 
+            aparência.
+        </p>
+        <img src="~/img/convence.png" alt="Imagem convence cliente" />
+    </div><!--container-->
+</section><!--convence-->
+
+<section class="depoimentos slider-depoimentos">
+    <div class="container-depoimentos">
+        <div class="depoimento-single">
+            <div class="depoimento-single-wraper">
+                <h3>Matilde da Silva Santos</h3>
+                <p>
+                    Espaço maravilhoso pessoas competentes e atenciosas super recomendo.
+                </p>
+                <div class="estrelas">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div><!--estrelas-->
+            </div><!--depoimento-single-wraper-->
+        </div><!--depoimento-single-->
+        <div class="depoimento-single">
+            <div class="depoimento-single-wraper">
+                <h3>Vanessa da Mata</h3>
+                <p>
+                    Lugar lindo, limpo e aconchegante. Oferece ótimos serviços para cuidados do corpo e da mente. 
+                    Sou fã dos procedimentos estéticos realizadas pela clínica.
+                </p>
+                <div class="estrelas">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div><!--estrelas-->
+            </div><!--depoimento-single-wraper-->
+        </div><!--depoimento-single-->
+        <div class="depoimento-single">
+            <div class="depoimento-single-wraper">
+                <h3>Giovanna Santana</h3>
+                <p>
+                    Ambiente agradável e aconchegante desde a recepção. Profissionais extremamente capacitados, 
+                    simpáticos e toda a equipe atende cada cliente de forma personalizada.
+                </p>
+                <div class="estrelas">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div><!--estrelas-->
+            </div><!--depoimento-single-wraper-->
+        </div><!--depoimento-single-->
+    </div><!--container-depoimentos-->
+</section><!--depoimentos slider-depoimentos-->

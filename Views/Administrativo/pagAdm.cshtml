@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "pagAdm";
+}
+
+<h2></h2>
+
+
+<style>
+    /* estilo da index principal */
+
+    .home .container-site {
+        border: 1px solid #e5243e;
+        padding: 20px 2%;
+    }
+
+    .home h2 {
+        margin: 50px 2%;
+    }
+
+    .home h2, .home h3 {
+        text-align: center;
+    }
+
+    .home .buttons-home {
+        padding: 10px 2%;
+        margin: 0 auto;
+        max-width: 300px;
+        display: flex;
+        align-items: center;
+    }
+
+        .home .buttons-home i {
+            font-size: 55px;
+            width: 60px;
+            margin-right: 20px;
+        }
+
+        .home .buttons-home a {
+            text-decoration: none;
+            color: #e5243e;
+            font-size: 24px;
+            display: inline;
+            padding: 0px 2px;
+        }
+
+            .home .buttons-home a:hover {
+                color: #545454;
+            }
+</style>
+
+<section class="home">
+    <h2>Bem-vindo ao sistema administrativo Narcissus Clínica de Estética!</h2>
+    <div class="container-site">
+        <h3>Acesse os cadastros disponíveis no sistema: </h3>
+        <div class="buttons-home">
+            <a href="@Url.Action("Cliente", "Cliente")"><i class="fa-solid fa-user"></i></a>
+            @Html.ActionLink("Clientes", "Cliente", "Cliente")
+        </div>
+        <div class="buttons-home">
+            <a href="@Url.Action("Funcionario", "Funcionario")"><i class="fa-regular fa-id-card"></i></a>
+            @Html.ActionLink("Funcionários", "Funcionario", "Funcionario")
+        </div>
+        <div class="buttons-home">
+            <a href="@Url.Action("Procedimento", "Procedimento")"><i class="fa-solid fa-address-book"></i></a>
+            @Html.ActionLink("Procedimentos", "Procedimento", "Procedimento")
+        </div>
+        <div class="buttons-home">
+            <a href="@Url.Action("Especialista", "Especialista")"><i class="fa-solid fa-user-nurse"></i></a>
+            @Html.ActionLink("Especialistas", "Especialista", "Especialista")
+        </div>
+    </div><!--container-->
+</section><!--home-->

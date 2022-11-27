@@ -1,0 +1,28 @@
+﻿@model NarcissusSystem.Models.Funcionario
+@{
+    ViewBag.Title = "CadFuncionario";
+}
+<br />
+<br />
+
+
+
+
+<style>
+    .cad {
+        text-align: center;
+    }
+
+        .cad h2 {
+            color: #f64c2d
+        }
+</style>
+
+
+<div class="cad">
+    <h2>Dados Cadastrados com sucesso!</h2>
+    <br />
+    <p>@Html.ActionLink("Voltar", "Funcionario")</p>
+    <p>@Html.ActionLink("Visualizar Funcionário", "ListarFuncionario")</p>
+</div>
+

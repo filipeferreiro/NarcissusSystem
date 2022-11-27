@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="~/img/favicon.ico">
+    <title>Narcissus | Estética e Tratamentos</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/slick/css")
+    <link href="~/Content/all.min.css" rel="stylesheet">
+    <link href="~/Content/fontawesome.min.css" rel="stylesheet">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link href="~/Content/Estilo.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="menu-desktop">
+                <div class="logo"><a href="@Url.Action("Index", "Home")"><img src="~/img/logo_preto.png" alt="Logo da Narcissus" /></a></div>
+                <div class="menu-right">
+                    <div class="icones-menu">
+                        <a href="@Url.Action("Carrinho", "Home")"><i class="fa-solid fa-cart-shopping"></i> Carrinho</a>
+                        <a href="@Url.Action("Pesquisa", "Home")"><i class="fa-solid fa-magnifying-glass"></i> Pesquisar</a>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <a href="@Url.Action("AlterarSenha", "Autenticacao")"><i class="fa-solid fa-user"></i> Olá, @User.Identity.Name</a>
+                            <a href="@Url.Action("Logout", "Autenticacao")"><i class="fa-solid fa-right-from-bracket"></i> Sair</a> 
+                            <a href="@Url.Action("pagAdm", "Administrativo")"><i class=""></i>Administração</a>
+
+
+
+
+                            @*<a href="@Url.Action("Procedimento", "Procedimento")"><i class=""></i>Procedimentos</a>
+                            <a href="@Url.Action("Especialista", "Especialista")"><i class=""></i>Especialistas</a>
+                            <a href="@Url.Action("Funcionario", "Funcionario")"><i class=""></i>Funcionários</a>*@
+
+
+
+                        }
+                        else
+                        {
+                            @Html.ActionLink("Cadastrar", "Insert", "Autenticacao")
+                            @Html.ActionLink("Logar", "Login", "Autenticacao")
+                        }
+                    </div><!--icones-menu-->
+                            
+                    @*@if (TempData["MensagemLogin"] != null)
+                    {
+                        <div class="alert alert-success" style="text-align:right">
+                            @TempData["MensagemLogin"]
+                        </div>
+                    }*@
+                </div>
+            </div><!--menu-desktop-->
+            <div class="menu-mobile">
+                <div class="logo"><a href="@Url.Action("Index", "Home")"><img src="~/img/logo_mobile.png" alt="Logo da Narcissus" /></a></div>
+                <div class="botao-menu-mobile"><i class="fa fa-bars" aria-hidden="true"></i></div>
+                <div class="menu-itens-toggle">
+                    <ul>
+                        <li><a href="@Url.Action("Index", "Home")">Início</a></li>
+                        <li><a href="@Url.Action("Tratamentos", "Home")">Tratamentos</a></li>
+                        <li><a href="@Url.Action("Produtos", "Home")">Produtos</a></li>
+                        <li><a href="@Url.Action("Carrinho", "Home")"><i class="fa-solid fa-cart-shopping"></i> Carrinho</a></li>
+                        <li><a href="@Url.Action("Pesquisa", "Home")"><i class="fa-solid fa-magnifying-glass"></i> Busca</a></li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li><a href="@Url.Action("AlterarSenha", "Autenticacao")"><i class="fa-solid fa-user"></i> Olá, @User.Identity.Name</a></li>
+                            <li><a href="@Url.Action("Logout", "Autenticacao")"><i class="fa-solid fa-right-from-bracket"></i> Sair</a></li>
+                        }
+                        else
+                        {
+                            <li>@Html.ActionLink("Cadastrar", "Insert", "Autenticacao")</li>
+                            <li>@Html.ActionLink("Logar", "Login", "Autenticacao")</li>
+                        }
+                    </ul>
+                </div><!--menu-itens-->
+
+            </div><!--menu-mobile-->
+            <div class="navegacao-menu">
+                <div class="container">
+                    <ul>
+                        <li>@Html.ActionLink("Início", "Index", "Home")</li>
+                        <li><a href="@Url.Action("Tratamentos", "Home")">Tratamentos</a></li>
+                        <li><a href="@Url.Action("Produtos", "Home")">Produtos</a></li> 
+                    </ul>
+                </div><!--container-->
+            </div><!--menu-itens-->
+
+        </div><!--container-->
+        <div class="linha-header"></div>
+    </header>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <br />
+    <br /> <br />
+    <footer class="footer-informacoes">
+        <div class="container">
+            <div class="informacoes">
+                <h3>Informações de contato</h3>
+                <p><i class="fa-brands fa-whatsapp"></i> Telefone (11) 3776-8174 ou (11) 3967-5831</p>
+                <p><i class="far fa-envelope"></i> E-mail: contato@narcissus.com</p>
+            </div><!--informacoes-->
+            <div class="redes">
+                <h3>Nossas redes sociais</h3>
+                <div class="redes-wrapper">
+                    <p><a href="https://web.facebook.com/Narcissus-Est%C3%A9tica-110046218584262"><i class="fa-brands fa-facebook"></i> Facebook</a></p>
+                    <p><a href="https://www.instagram.com/narcissus.estetica/"><i class="fa-brands fa-instagram"></i> Instagram</a></p>
+                    <p><a href="https://www.linkedin.com/in/narcissus-estetica-247666256/"><i class="fa-brands fa-linkedin"></i> Linkedin</a></p>
+                    <p><a href="https://twitter.com/NarcissusEstica"><i class="fa-brands fa-twitter"></i> Twitter</a></p>
+                </div><!--redes-wrapper-->
+            </div><!--redes-->
+        </div><!--container-->
+        <div class="copy">
+            <p>Site desenvolvido com <i class="fa-solid fa-heart"></i> por ByteAttack </p>
+            <p>Todos os direitos reservados &copy; 2022</p>
+        </div><!--copy-->
+    </footer><!--footer-informacoes-->
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/slick/slick.min.js")
+    @Scripts.Render("~/Scripts/script.js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

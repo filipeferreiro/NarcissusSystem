@@ -1,0 +1,21 @@
+﻿@model NarcissusSystem.Models.Especialista
+
+@{
+    ViewBag.Title = "CadEspecialista";
+}
+<style>
+    .cad{
+        text-align:center;
+    }
+    .cad h2{
+        color:#f64c2d
+    }
+</style>
+
+<br />
+<div class="cad">
+    <h2>Especialista Cadastrado com sucesso!</h2>
+    <br />
+    <p>@Html.ActionLink("Voltar", "Especialista")</p>
+    <p>@Html.ActionLink("Visualizar Especialista", "ListarEspecialista")</p>
+</div>

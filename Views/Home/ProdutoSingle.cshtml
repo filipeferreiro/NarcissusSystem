@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "ProdutoSingle";
+}
+
+<section class="produto-page">
+    <div class="container">
+        <div class="breadcrumb"><a href="@Url.Action("Produtos", "Home")">Produtos</a> > <a href="" style="pointer-events: none">Produto atual</a></div>
+        <h2>Titulo do produto</h2>
+        <div class="produto-wraper">
+            <div class="img-slider">
+                <div class="container-img-slider">
+                    <img src="~/img/creme.png" alt="imagem do produto">
+                    <img src="~/img/produto1.png" alt="imagem do produto">
+                    <img src="~/img/favorito.png" alt="imagem do produto">
+                </div><!--container-img-slider-->
+                <div class="img-slider-nav">
+                    <img src="~/img/creme.png" alt="imagem do produto">
+                    <img src="~/img/produto1.png" alt="imagem do produto">
+                    <img src="~/img/favorito.png" alt="imagem do produto">
+                </div>
+            </div><!--img-slider-->
+            <div class="produto-info">
+                <div class="estrelas">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div><!--estrelas-->
+                <p>O Preenchimento é indicado para homens e mulheres que desejam tratar as rugas estáticas, 
+                volumizar a região e harmonizar o rosto. Produto dá direito a 1 ml de Ácido Hialurônico.</p>
+                <div class="preco">
+                    <div class="preco-left">
+                        <p>de R$1.690,00</p>
+                        <p>por R$1.000,00</p>
+                    </div><!--preco-left-->
+                    <div class="preco-right">
+                        <button class="produto-comprar">Comprar</button>
+                        <a href="">Adicionar ao carrinho</a>
+                    </div><!--preco-right-->
+                </div>
+            </div><!--produto-info-->
+        </div><!--produto-wraper-->
+    </div><!--container-->
+</section><!--produto-page-->
